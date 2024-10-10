@@ -1,325 +1,245 @@
- body {
-     font-family: Arial, sans-serif;
-     background-color: #E5D8B6;
-     margin: 0;
-     padding: 0;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100vh;
-     overflow-y: auto;
-     scroll-behavior: smooth;
-     position: sticky;
- }
-
- .container {
-     width: 85%;
-     margin: 20px auto;
-     background: #fff;
-     padding: 30px;
-     border-radius: 20px;
-     border: 1px solid;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-     position: relative;
-     z-index: 10;
-
-     h1,
-     h2,
-     h3 {
-         margin: 0;
-         padding-bottom: 10px;
-         border-bottom: 1px solid #b0b0b0;
-     }
-
-     table {
-         width: 100%;
-         border-collapse: collapse;
-         margin: 20px 0;
-     }
-
-     table,
-     th,
-     td {
-         border: 1px solid lightgray;
-     }
-
-     th,
-     td {
-         padding: 10px;
-         text-align: left;
-     }
-
-     th {
-         background-color: lightgray;
-     }
-
-     div {
-         border-radius: 15px;
-     }
-
-     .name {
-         font-family: comfortaa;
-         font-size: 40px;
-     }
-
-     a {
-         text-decoration: none;
-         font-weight: bold;
-     }
-
-     .instagram {
-         font-size: 20px;
-     }
-
-     .instagram:hover {
-         background: linear-gradient(to right, yellow, orange, red, purple, blue);
-         background-clip: text;
-         -webkit-background-clip: text;
-         -webkit-text-fill-color: transparent;
-     }
+html {
+    scroll-behavior: smooth;
+}
 
 
-     .linkedin:hover {
-         color: aqua;
-     }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E5D8B6;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: sticky;
+}
 
-     .github:hover {
-         color: black;
-     }
+.container {
+    width: 85%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
 
-     .port:hover {
-         color: lime;
-     }
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b0b0b0;
+}
 
-     img {
-         border-radius: 30px;
-         width: 200px;
-         margin: 30px 30px 40px 10px;
-         box-shadow: 4px 4px gray;
-         border: 5px solid white;
-         filter: grayscale(100%);
-         transition: all 0.5s ease-in;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
-         &:hover {
-             transform: scale(1.11);
-             filter: grayscale(0);
-             box-shadow: 10px 10px 16px;
-         }
-     }
+table, th, td {
+    border: 1px solid lightgray;
+}
 
-     ::selection {
-         background-color: black;
-         color: white;
-     }
+th, td {
+    padding: 10px;
+    text-align: left;
+}
 
-     .picture {
-         display: flex;
-         flex-wrap: wrap;
-         align-items: center;
-         margin-right: 20px;
-     }
+th {
+    background-color: lightgray;
+}
 
-     .media {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-     }
+div {
+    border-radius: 15px;
+}
 
-     .quote {
-         width: 80%;
-         height: 80%;
-         padding: 10px;
-     }
+.name {
+    font-family: comfortaa;
+    font-size: 40px;
+}
 
-     .pp {
-         margin-bottom: 40px;
-     }
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
 
-     big {
-         font-size: 150%;
-         font-family: a;
-     }
+.instagram {
+    font-size: 20px;
+}
 
-     .bubbles {
-         position: fixed;
-         width: 100%;
-         height: 100vh;
-         bottom: 0;
-         left: 0;
-         overflow: hidden;
-         z-index: 1;
-     }
+.instagram:hover {
+    background: linear-gradient(to right, yellow, orange, red, purple, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-     .bubble {
-         position: absolute;
-         bottom: -100px;
-         width: 20px;
-         height: 20px;
-         background: gray;
-         border-radius: 50%;
-         box-shadow: 0 0 15px black;
-         animation: rise 10s infinite linear;
-         opacity: 0.8;
-     }
+.linkedin:hover {
+    color: aqua;
+}
 
-     @keyframes rise {
-         0% {
-             transform: translateY(0) scale(1);
-             opacity: 0.7;
-         }
+.github:hover {
+    color: black;
+}
 
-         50% {
-             transform: translateY(-50vh) scale(1.2);
-             opacity: 1;
-         }
+.port:hover {
+    color: lime;
+}
 
-         100% {
-             transform: translateY(-100vh) scale(1.5);
-             opacity: 0;
-         }
-     }
+img {
+    border-radius: 30px;
+    width: 200px;
+    margin: 30px 30px 40px 10px;
+    box-shadow: 4px 4px gray;
+    border: 5px solid white;
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in;
+}
 
-     /* Adding variation in animation */
-     .bubble:nth-child(odd) {
-         animation-duration: 12s;
-         animation-timing-function: ease-in-out;
-     }
+img:hover {
+    transform: scale(1.11);
+    filter: grayscale(0);
+    box-shadow: 10px 10px 16px;
+}
 
-     .bubble:nth-child(even) {
-         animation-duration: 8s;
-     }
+::selection {
+    background-color: black;
+    color: white;
+}
 
-     /* Adjust size and position of each bubble */
-     .bubble:nth-child(1) {
-         width: 30px;
-         height: 30px;
-         left: 10%;
-     }
+.picture {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 20px;
+}
 
-     .bubble:nth-child(2) {
-         width: 40px;
-         height: 40px;
-         left: 20%;
-         animation-delay: 2s;
-     }
+.media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-     .bubble:nth-child(3) {
-         width: 50px;
-         height: 50px;
-         left: 30%;
-         animation-delay: 4s;
-     }
+.quote {
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+}
 
-     .bubble:nth-child(4) {
-         width: 20px;
-         height: 20px;
-         left: 40%;
-         animation-delay: 6s;
-     }
+.pp {
+    margin-bottom: 40px;
+}
 
-     .bubble:nth-child(5) {
-         width: 60px;
-         height: 60px;
-         left: 50%;
-     }
+big {
+    font-size: 150%;
+    font-family: a;
+}
 
-     .bubble:nth-child(6) {
-         width: 70px;
-         height: 70px;
-         left: 60%;
-         animation-delay: 2s;
-     }
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
 
-     .bubble:nth-child(7) {
-         width: 30px;
-         height: 30px;
-         left: 70%;
-         animation-delay: 4s;
-     }
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+    box-shadow: 0 0 15px black;
+    animation: rise 10s infinite linear;
+    opacity: 0.8;
+}
 
-     .bubble:nth-child(8) {
-         width: 80px;
-         height: 80px;
-         left: 80%;
-         animation-delay: 6s;
-     }
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-50vh) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
 
-     .bubble:nth-child(9) {
-         width: 90px;
-         height: 90px;
-         left: 90%;
-     }
+/* Media Queries */
 
-     .bubble:nth-child(10) {
-         width: 20px;
-         height: 20px;
-         left: 15%;
-     }
+/* Small devices (mobile phones, 600px and below) */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
 
-     .bubble:nth-child(11) {
-         width: 30px;
-         height: 30px;
-         left: 25%;
-         animation-delay: 1s;
-     }
+    .name {
+        font-size: 30px;
+    }
 
-     .bubble:nth-child(12) {
-         width: 40px;
-         height: 40px;
-         left: 35%;
-         animation-delay: 3s;
-     }
+    img {
+        width: 150px;
+    }
 
-     .bubble:nth-child(13) {
-         width: 50px;
-         height: 50px;
-         left: 45%;
-     }
+    .quote {
+        width: 100%;
+        height: auto;
+    }
+}
 
-     .bubble:nth-child(14) {
-         width: 60px;
-         height: 60px;
-         left: 55%;
-         animation-delay: 5s;
-     }
+/* Medium devices (tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
 
-     .bubble:nth-child(15) {
-         width: 30px;
-         height: 30px;
-         left: 65%;
-     }
+    .media {
+        flex-direction: column;
+    }
 
-     .bubble:nth-child(16) {
-         width: 70px;
-         height: 70px;
-         left: 75%;
-         animation-delay: 1s;
-     }
+    .picture {
+        justify-content: center;
+    }
 
-     .bubble:nth-child(17) {
-         width: 80px;
-         height: 80px;
-         left: 85%;
-         animation-delay: 3s;
-     }
+    img {
+        width: 180px;
+        margin: 20px 10px;
+    }
 
-     .bubble:nth-child(18) {
-         width: 90px;
-         height: 90px;
-         left: 95%;
-     }
+    .quote {
+        width: 90%;
+    }
+}
 
-     .bubble:nth-child(19) {
-         width: 20px;
-         height: 20px;
-         left: 5%;
-         animation-delay: 4s;
-     }
+/* Large devices (desktops, 1024px and above) */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 75%;
+    }
 
-     .bubble:nth-child(20) {
-         width: 50px;
-         height: 50px;
-         left: 12%;
-         animation-delay: 2s;
-     }
- }
+    .media {
+        flex-direction: row;
+    }
+
+    img {
+        width: 220px;
+    }
+
+    .quote {
+        width: 85%;
+    }
+}
