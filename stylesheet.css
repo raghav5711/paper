@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     background-color: #E5D8B6;
@@ -59,7 +58,7 @@ div {
 }
 
 .name {
-    font-family: comfortaa;
+    font-family: Comfortaa, sans-serif;
     font-size: 40px;
 }
 
@@ -137,7 +136,7 @@ img:hover {
 
 big {
     font-size: 150%;
-    font-family: a;
+    font-family: Arial, sans-serif;
 }
 
 .bubbles {
@@ -162,6 +161,7 @@ big {
     opacity: 0.8;
 }
 
+/* Keyframes for Bubble Animation */
 @keyframes rise {
     0% {
         transform: translateY(0) scale(1);
@@ -177,69 +177,96 @@ big {
     }
 }
 
-/* Media Queries */
+/* Responsive Media Queries */
 
 /* Small devices (mobile phones, 600px and below) */
 @media screen and (max-width: 600px) {
+    body {
+        height: auto;
+    }
+
     .container {
-        width: 95%;
-        padding: 20px;
+        width: 90%; /* Increase width to avoid cutting off elements */
+        margin: 10px auto;
+        padding: 15px; /* Decrease padding */
     }
 
     .name {
-        font-size: 30px;
+        font-size: 28px; /* Smaller font size */
+        text-align: center;
     }
 
     img {
-        width: 150px;
+        width: 150px; /* Smaller image width */
+        margin: 10px auto; /* Center images */
     }
 
     .quote {
         width: 100%;
         height: auto;
+        padding: 5px; /* Reduce padding */
+        text-align: center;
+    }
+
+    .media {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .picture {
+        display: block; /* Stack images vertically */
+        text-align: center;
+    }
+
+    table {
+        font-size: 12px; /* Reduce font size for readability */
     }
 }
 
 /* Medium devices (tablets, 768px and below) */
 @media screen and (max-width: 768px) {
     .container {
-        width: 90%;
-        padding: 25px;
+        width: 85%; /* Slightly reduce width */
+        padding: 20px;
     }
 
-    .media {
-        flex-direction: column;
-    }
-
-    .picture {
-        justify-content: center;
+    .name {
+        font-size: 32px;
     }
 
     img {
-        width: 180px;
-        margin: 20px 10px;
+        width: 160px; /* Slightly reduce image size */
+        margin: 15px 10px; /* Decrease spacing */
     }
 
     .quote {
         width: 90%;
+        text-align: left;
+    }
+
+    .media {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 /* Large devices (desktops, 1024px and above) */
 @media screen and (min-width: 1024px) {
     .container {
-        width: 75%;
+        width: 70%; /* Increase width */
+        padding: 30px;
     }
 
-    .media {
-        flex-direction: row;
+    .name {
+        font-size: 40px; /* Larger font size */
     }
 
     img {
-        width: 220px;
+        width: 200px;
+        margin: 20px 20px 30px 10px;
     }
 
     .quote {
-        width: 85%;
+        width: 80%;
     }
 }
